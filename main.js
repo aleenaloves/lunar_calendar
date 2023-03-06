@@ -113,7 +113,7 @@ for (var month in currentYearGroupedByMonth) {
 
   const monthContainerId = `${month}-container`;
   monthContainerIds.push(monthContainerId);
-  const calendarMonth = `<div id="${monthContainerId}"><h3 class="month-title title is-3 is-lowercase">${month}</h3>
+  const calendarMonth = `<div id="${monthContainerId}" class="month-container"><h3 class="month-title title is-3 is-lowercase">${month}</h3>
   <div class="calendar-square-container">${days}</div></div>`;
   calendar.innerHTML += calendarMonth;
 }

@@ -17,21 +17,25 @@ footer {
   color: #e6ded3 !important;
 }
 
+
 #calendar-key {
     font-size: 1.5em !important;
     font-family: "Urbanist", sans-serif;
     color: #e6ded3;
+    font-weight: 500;
 }
 
 .calendar-key-square-past{
     height: 1em;
     width: 1em;
+    margin-top: 2em;
     background-color: #5A3E79 !important;
 }
 
 .calendar-key-square-present{
     height: 1em;
     width: 1em;
+    margin-top: 1em;
     background-color: #c89dd8 !important;
 }
 
@@ -43,7 +47,7 @@ footer {
 
 .main-title {
   font-family: "Rampart One", cursive;
-  color: #f0c420 !important;
+  /* color: #f0c420 !important; */
 }
 
 #current-phase-emoji {
@@ -55,7 +59,7 @@ footer {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 5px;
   margin: 1em;
-  margin-bottom: 10em;
+  margin-bottom: 5em;
 }
 
 .calendar-square-container-square {
@@ -99,7 +103,7 @@ footer {
   text-align: center !important;
   font-family: "Urbanist", sans-serif;
   color: #e6ded3 !important;
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 .active-day {
