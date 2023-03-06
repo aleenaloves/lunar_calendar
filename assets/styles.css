@@ -23,6 +23,8 @@ footer {
     font-family: "Urbanist", sans-serif;
     color: #e6ded3;
     font-weight: 500;
+    margin-bottom: 3em;
+    margin-top: 2em;
 }
 
 .calendar-key-square-past{
