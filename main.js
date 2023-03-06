@@ -23,8 +23,8 @@ window.onscroll = function () {
 
 function scrollFunction() {
   if (
-    document.body.scrollTop > 500 ||
-    document.documentElement.scrollTop > 500
+    document.body.scrollTop > 200 ||
+    document.documentElement.scrollTop > 200
   ) {
     scrollButton.style.display = "inline-flex";
   } else {
@@ -89,11 +89,16 @@ for (var month in currentYearGroupedByMonth) {
     }
 
     let activeDayClass = "";
+    let pastDayClass = "";
     if (day.currentDate.getTime() === currentDate.getTime()) {
       activeDayClass = "active-day";
     }
 
-    const dayValue = `<div class="calendar-square-container-square ${activeDayClass}">
+    if(day.currentDate.getTime() < currentDate.getTime()) {
+        pastDayClass = "past-day";
+    }
+
+    const dayValue = `<div class="calendar-square-container-square ${activeDayClass} ${pastDayClass}">
     <div class="calendar-square-container-text">
     <p class="calendar-square-container-date">${day.currentDate.toLocaleDateString(
       "en-us",

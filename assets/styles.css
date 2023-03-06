@@ -17,6 +17,30 @@ footer {
   color: #e6ded3 !important;
 }
 
+#calendar-key {
+    font-size: 1.5em !important;
+    font-family: "Urbanist", sans-serif;
+    color: #e6ded3;
+}
+
+.calendar-key-square-past{
+    height: 1em;
+    width: 1em;
+    background-color: #5A3E79 !important;
+}
+
+.calendar-key-square-present{
+    height: 1em;
+    width: 1em;
+    background-color: #c89dd8 !important;
+}
+
+.calendar-key-square-future{
+    height: 1em;
+    width: 1em;
+    background-color: #b19ff9 !important;
+}
+
 .main-title {
   font-family: "Rampart One", cursive;
   color: #f0c420 !important;
@@ -39,7 +63,13 @@ footer {
   aspect-ratio: 1;
 }
 
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
 #go-to-top-button {
+  animation: fadeIn 2s;
   position: fixed;
   bottom: 3em;
   right: 1em;
@@ -78,6 +108,10 @@ footer {
 
 .is-today {
   font-size: 50em !important;
+}
+
+.past-day {
+    background-color: #5A3E79 !important;
 }
 
 @media screen and (max-width: 950px) {
