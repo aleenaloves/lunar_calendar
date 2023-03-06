@@ -31,6 +31,9 @@ footer {
     margin-top: 2em;
     background-color: #5A3E79 !important;
 }
+.calendar-key-square-past p {
+    margin-top: 0.5em !important;
+}
 
 .calendar-key-square-present{
     height: 1em;
@@ -38,11 +41,17 @@ footer {
     margin-top: 1em;
     background-color: #c89dd8 !important;
 }
+.calendar-key-square-present p {
+    margin-top: 0.5em !important;
+}
 
 .calendar-key-square-future{
     height: 1em;
     width: 1em;
     background-color: #b19ff9 !important;
+}
+.calendar-key-square-future p {
+    margin-top: 0.5em !important;
 }
 
 .main-title {
