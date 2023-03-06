@@ -21,51 +21,36 @@
     <link rel="stylesheet" href="assets/styles.css" />
     <script type="module" src="main.js"></script>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma/css/bulma.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fontsource/rampart-one@4.5.13/400.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fontsource/urbanist@4.5.17/200.min.css"
+    />
   </head>
 
   <body>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <a class="navbar-item" href="/lunar_calendar/">
-          <span id="current-phase-emoji"></span>
-          The Lunar Calendar
-        </a>
-      </div>
-
-      <div id="navbarBasicExample" class="navbar-menu">
-      </div>
-    </nav>
+    <div class="section">
+      <h1 class="main-title title has-text-centered is-1 is-uppercase">
+        The Lunar Calendar
+      </h1>
+      <h1 class="main-title title has-text-centered is-1 is-uppercase">
+        🌑 🌒 🌓 🌔 🌕 🌖 🌗 🌘
+      </h1>
+      <h2
+        id="current-year"
+        class="main-title title has-text-centered is-2 is-uppercase"
+      ></h2>
+    </div>
 
     <div id="calendar" class="section"></div>
 
-
-    <footer class="footer">
-      <div class="content has-text-centered">
-        <p>Ⓒ <span id="footer-year"></span> - The Lunar Calendar</p>
-      </div>
-    </footer>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        // Get all "navbar-burger" elements
-        const $navbarBurgers = Array.prototype.slice.call(
-          document.querySelectorAll(".navbar-burger"),
-          0
-        );
-
-        // Add a click event on each of them
-        $navbarBurgers.forEach((el) => {
-          el.addEventListener("click", () => {
-            // Get the target from the "data-target" attribute
-            const target = el.dataset.target;
-            const $target = document.getElementById(target);
-
-            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-            el.classList.toggle("is-active");
-            $target.classList.toggle("is-active");
-          });
-        });
-      });
-    </script>
+    <button id="go-to-top-button" class="button is-info">Scroll to Top</button>
   </body>
 </html>

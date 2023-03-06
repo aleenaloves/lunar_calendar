@@ -14,15 +14,37 @@ function GetNextDate(currentDate) {
   return date;
 }
 
+let scrollButton = document.getElementById("go-to-top-button");
+scrollButton.onclick = topFunction;
+
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 500 ||
+    document.documentElement.scrollTop > 500
+  ) {
+    scrollButton.style.display = "inline-flex";
+  } else {
+    scrollButton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
 const currentDate = GetCurrentDate();
-const currentDateMonth = GetCurrentDate().toLocaleString("en-us", { month: "long" });
+const currentDateMonth = GetCurrentDate().toLocaleString("en-us", {
+  month: "long",
+});
 const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
-const footerYear = document.getElementById("footer-year");
-footerYear.innerText = currentDate.getFullYear();
-
-const navEmoji = document.getElementById("current-phase-emoji");
-navEmoji.innerText = Moon.lunarPhaseEmoji(currentDate)
+const currentYearElement = document.getElementById("current-year");
+currentYearElement.innerText = currentDate.getFullYear();
 
 const currentYear = [];
 
@@ -66,33 +88,34 @@ for (var month in currentYearGroupedByMonth) {
       phases += `<p>${day.tomorrowEmoji} ${day.tomorrowPhase}</p>`;
     }
 
-    let activeDayClass = ""
-    if(day.currentDate.getTime() === currentDate.getTime()){
-        console.log("hit")
-        activeDayClass = "active-day"
+    let activeDayClass = "";
+    if (day.currentDate.getTime() === currentDate.getTime()) {
+      activeDayClass = "active-day";
     }
 
-    days += `<div class="calendar-square-container-square ${activeDayClass}">
-        <div class="calendar-square-container-text">
-        <p class="calendar-square-container-date">${day.currentDate.toLocaleDateString(
-          "en-us",
-          { weekday: "short", month: "short", day: "numeric" }
-        )}</p>
-            ${phases}
-        </div>
-    </div>`;
+    const dayValue = `<div class="calendar-square-container-square ${activeDayClass}">
+    <div class="calendar-square-container-text">
+    <p class="calendar-square-container-date">${day.currentDate.toLocaleDateString(
+      "en-us",
+      { weekday: "short", month: "short", day: "numeric" }
+    )}</p>
+        ${phases}
+    </div>
+</div>`;
+
+    days += dayValue;
   });
 
   const monthContainerId = `${month}-container`;
   monthContainerIds.push(monthContainerId);
-  const calendarMonth = `<div id="${monthContainerId}"><p class="month-title title is-1">${month} ${currentDate.getFullYear()}</p>
-  <div class="calendar-square-container">${days}</div></div>`
+  const calendarMonth = `<div id="${monthContainerId}"><h3 class="month-title title is-3 is-lowercase">${month}</h3>
+  <div class="calendar-square-container">${days}</div></div>`;
   calendar.innerHTML += calendarMonth;
 }
 
-monthContainerIds.forEach(monthContainerId => {
-    const monthContainer = document.getElementById(monthContainerId);
-    if(!monthContainerId.includes(currentDateMonth)){
-        monthContainer.style.display = "none";
-    }
-})
+// monthContainerIds.forEach(monthContainerId => {
+//     const monthContainer = document.getElementById(monthContainerId);
+//     if(!monthContainerId.includes(currentDateMonth)){
+//         monthContainer.style.display = "none";
+//     }
+// })

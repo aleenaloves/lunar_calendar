@@ -1,119 +1,123 @@
 body {
-    background-color: #211522;
+  background-color: #211522;
 }
 
 html {
-    background-color: #211522 !important;
+  background-color: #211522 !important;
 }
 
 footer {
-    background-color: #613659 !important;
-    color: white;
-    font-weight: 600;
-    margin: 1em;
+  background-color: #613659 !important;
+  color: white;
+  font-weight: 600;
+  margin: 1em;
 }
 
 .title {
-    color:#E6DED3 !important;
+  color: #e6ded3 !important;
 }
 
-.navbar {
-    margin: 1em;
-    background-color: #B19FF9 !important;
-}
-.navbar-brand .navbar-item img {
-    margin-right: 1em;
+.main-title {
+  font-family: "Rampart One", cursive;
+  color: #f0c420 !important;
 }
 
-#current-phase-emoji{
-    margin-right: 0.5em;
-}
-
-.navbar-brand .navbar-item {
-    color: black;
-    font-weight: 600;
-    text-align: center;
-}
-
-.navbar-brand .navbar-item:hover {
-    color: #E6DED3;
+#current-phase-emoji {
+  margin-right: 0.5em;
 }
 
 .calendar-square-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 5px;
-    margin: 1em;
-    margin-bottom: 10em;
-  }
-  
-  .calendar-square-container-square {
-    background-color: #B19FF9;
-    aspect-ratio: 1;
-  }
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 5px;
+  margin: 1em;
+  margin-bottom: 10em;
+}
 
+.calendar-square-container-square {
+  background-color: #b19ff9;
+  aspect-ratio: 1;
+}
+
+#go-to-top-button {
+  position: fixed;
+  bottom: 3em;
+  right: 1em;
+  display: none;
+  background-color: #f0c420 !important;
+  color: #211522;
+  font-family: "Urbanist", sans-serif;
+  font-weight: bolder;
+}
+
+.calendar-square-container-text {
+  margin: 1em !important;
+  font-size: small;
+  color: white;
+}
+
+.calendar-square-container-date {
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-weight: bold;
+  background-color: #e6ded3;
+  color: black;
+}
+
+.month-title {
+  text-align: center !important;
+  font-family: "Urbanist", sans-serif;
+  color: #e6ded3 !important;
+  text-decoration: underline;
+}
+
+.active-day {
+  background-color: #c89dd8 !important;
+}
+
+.is-today {
+  font-size: 50em !important;
+}
+
+@media screen and (max-width: 950px) {
   .calendar-square-container-text {
-    margin: 1em !important;
-    font-size: small;
-    color: white;
+    font-size: 0.75em;
   }
+}
 
-  .calendar-square-container-date {
-    text-align: center;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    font-weight: bold;
-    background-color: #E6DED3;
-    color: black;
+@media screen and (max-width: 870px) {
+  .calendar-square-container-text {
+    font-size: 0.65em;
   }
+}
 
-  .month-title {
-    text-align: center !important;
+@media screen and (max-width: 800px) {
+  .calendar-square-container-text {
+    font-size: 0.55em;
   }
+}
 
-  .active-day {
-    background-color: #C89DD8 !important;
+@media screen and (max-width: 720px) {
+  .calendar-square-container-text {
+    font-size: 0.45em;
   }
+}
 
-
-  @media screen and (max-width: 950px) {
-      .calendar-square-container-text {
-        font-size: 0.75em;
-      }
+@media screen and (max-width: 620px) {
+  .calendar-square-container-text {
+    font-size: 0.35em;
   }
+}
 
-  @media screen and (max-width: 870px) {
-      .calendar-square-container-text {
-        font-size: 0.65em;
-      }
+@media screen and (max-width: 520px) {
+  .calendar-square-container-text {
+    font-size: 0.25em;
   }
-
-  @media screen and (max-width: 800px) {
-      .calendar-square-container-text {
-        font-size: 0.55em;
-      }
-  }
-
-  @media screen and (max-width: 720px) {
-      .calendar-square-container-text {
-        font-size: 0.45em;
-      }
-  }
-
-  @media screen and (max-width: 620px) {
-      .calendar-square-container-text {
-        font-size: 0.35em;
-      }
-  }
-
-  @media screen and (max-width: 520px) {
-    .calendar-square-container-text {
-      font-size: 0.25em;
-    }
 }
 
 @media screen and (max-width: 420px) {
-    .calendar-square-container-text {
-      font-size: 0.20em;
-    }
+  .calendar-square-container-text {
+    font-size: 0.2em;
+  }
 }
